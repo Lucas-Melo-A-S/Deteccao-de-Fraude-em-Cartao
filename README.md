@@ -1,40 +1,37 @@
-# Credit Card Fraud Detection — Precision-Oriented Modeling
+# Detecção de Fraude de Cartão de Crédito — Modelo Orientado a Precisão
 
-This project implements a complete and leakage-safe machine learning pipeline
-for credit card fraud detection using the Kaggle Credit Card Fraud dataset.
+🎯 Objetivo
 
-## 🎯 Objective
-Maximize **precision** while maintaining a reasonable recall, minimizing false
-positives in a highly imbalanced dataset (~0.17% fraud).
+Maximizar a precisão (precision) mantendo um recall razoável, minimizando falsos positivos em um dataset altamente desbalanceado (~0,17% de fraudes).
 
-## 🔍 Dataset
-- Source: Kaggle – Credit Card Fraud Detection (ULB)
-- Features: PCA-transformed numerical variables
-- Target: `Class` (1 = Fraud, 0 = Legit)
+🔍 Dataset
+	•	Fonte: Kaggle – Credit Card Fraud Detection (ULB)
+	•	Features: variáveis numéricas transformadas via PCA
+	•	Target: Class (1 = Fraude, 0 = Legítima)
 
-## 🧠 Methodology
-- Stratified train / calibration / test split
-- XGBoost with conservative hyperparameters
-- Probability calibration (Sigmoid)
-- Threshold selection based on target precision
-- Evaluation with ROC-AUC, PR-AUC, confusion matrix
+🧠 Metodologia
+	•	Split estratificado em treino / calibração / teste
+	•	XGBoost com hiperparâmetros conservadores
+	•	Calibração de probabilidades (Sigmoid)
+	•	Seleção de threshold baseada em uma precisão-alvo
+	•	Avaliação com ROC-AUC, PR-AUC e matriz de confusão
 
-## 📊 Final Results
-- Precision ≈ 40%
-- Recall ≈ 83%
-- False Positives: 22–133 (depending on threshold)
-- Robust, interpretable and production-oriented solution
+📊 Resultados Finais
+	•	Precision ≈ 40%
+	•	Recall ≈ 82%
+	•	Falsos Positivos: 19 – 132 (dependendo do threshold)
+	•	Solução robusta, interpretável e orientada a produção
 
-## 📁 Repository Structure
-- `data/` → raw and processed datasets
-- `notebooks/` → step-by-step analysis
-- `src/` → reusable modeling and evaluation code
+📁 Estrutura do Repositório
+	•	data/ → dados brutos e processados
+	•	notebooks/ → análises passo a passo
+	•	src/ → código reutilizável de modelagem e avaliação
 
-## 🚀 Key Takeaways
-- Accuracy is misleading in fraud detection
-- Threshold tuning is as important as model choice
-- Calibration is essential for reliable decision-making
+🚀 Principais Aprendizados
+	•	Accuracy é enganosa em problemas de fraude
+	•	Ajuste de threshold é tão importante quanto a escolha do modelo
+	•	Calibração é essencial para decisões confiáveis
 
-## 📌 Author
-Lucas Melo Silva  
+📌 Autor
+Lucas Melo Silva
 Data Science & Machine Learning
